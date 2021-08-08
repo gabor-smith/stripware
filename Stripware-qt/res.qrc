@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>swicon.png</file>
+        <file>gplv3-or-later-sm.png</file>
+    </qresource>
+</RCC>
