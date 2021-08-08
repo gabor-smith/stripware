@@ -3,6 +3,8 @@ A simple RGB LED strip controller software with a gui built in Qt.
 
 This project was inspired by vannevar-morgan's similiar project, [check it out here!](https://github.com/vannevar-morgan/Qt-RGB-LED)
 
+![screenshot](./screenshot.png)
+
 ## How to use
 * Currently it's only working on Linux. I might port it to Windows later if I have the time for it.
 * Pre-built binaries aren't available right now, but you can built it for yourself.
