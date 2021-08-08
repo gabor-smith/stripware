@@ -11,7 +11,7 @@ This project was inspired by vannevar-morgan's similiar project, [check it out h
 * If you're not familiar with the command line don't be scared, Its really easy just follow my instructions below.
 
 ### Dependencies
-* For building you'll need qmake, qt5 and a C++ compiler
+* For building you'll need **qmake**, **qt5** and a C++ compiler like **g++**
 * You'll have to get these packages by yourself if you don't have them yet, I can't list all the distros here, but usually they are called the same as above.
 * If you want to use git to clone this repository before building you'll need... git!
 
