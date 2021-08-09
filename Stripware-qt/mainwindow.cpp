@@ -96,6 +96,7 @@ MainWindow::MainWindow(QWidget *parent) ://Constructor
     QObject::connect(rgbTimer, &QTimer::timeout, this, QOverload<>::of(&MainWindow::rgb));
 
     ui->comboBox->addItem("RGB Fade");
+    ui->comboBox->addItem("Blue breathe");
 
     ui->statusBar->addPermanentWidget(ui->comboBox_serialPorts,0);
     ui->statusBar->layout()->setContentsMargins(0, 0, 5, 0);
@@ -222,9 +223,18 @@ void MainWindow::rgb()
           rInc = fadeAmount;
       }
 
-      rgbColor.setRed(rgbColor.red() + rInc);
-      rgbColor.setGreen(rgbColor.green() + gInc);
-      rgbColor.setBlue(rgbColor.blue() + bInc);
+      if((rgbColor.red() + rInc) > 255) rgbColor.setRed(255);
+      else if((rgbColor.red() + rInc) < 0) rgbColor.setRed(0);
+      else rgbColor.setRed(rgbColor.red() + rInc);
+
+      if((rgbColor.green() + gInc) > 255) rgbColor.setGreen(255);
+      else if((rgbColor.green() + gInc) < 0) rgbColor.setGreen(0);
+      else rgbColor.setGreen(rgbColor.green() + gInc);
+
+      if((rgbColor.blue() + bInc) > 255)rgbColor.setBlue(255);
+      else if((rgbColor.blue() + bInc) < 0)rgbColor.setBlue(0);
+      else rgbColor.setBlue(rgbColor.blue() + bInc);
+
       refresh();
 }
 
@@ -251,16 +261,22 @@ void MainWindow::on_pushButton_2_clicked()
 
                 rgbColor.setRgb(0,0,0);
                 rgbTimer->start(inverse(ui->spinBox_2->value()));
+                break;
+            case 1:
+                rInc = 0;
+                gInc = 0;
+                bInc = fadeAmount;
 
-                qDebug() << "Speed:" << inverse(ui->spinBox_2->value());
-                qDebug() << "Fade amount:" << fadeAmount;
-                qDebug() << "Brightness:" << brightness;
+                rgbColor.setRgb(0,0,0);
                 break;
             default :
                 qDebug() << "Effect missing";
                 break;
         }
-    }
+        qDebug() << "Speed:" << inverse(ui->spinBox_2->value());
+        qDebug() << "Fade amount:" << fadeAmount;
+        qDebug() << "Brightness:" << brightness;
+    }  
     refresh();
 }
 
