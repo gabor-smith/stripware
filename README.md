@@ -42,7 +42,7 @@ I included a customized version of [this.](https://tech-artists.org/t/release-qt
 If you want to use the included dark stylesheet, type `-stylesheet=stylesheet.qss` when launching the program.
 
 ## Postscript
-If you find any issues with this program please report them [here.](https://github.com/nukecat/stripware/issues/new)
+If you find any issues with this program please report them [here.](https://github.com/gabor-smith/stripware/issues/new)
 Thank you.
 
 ## License
