@@ -3,7 +3,7 @@ A simple RGB LED strip controller software with a gui built in Qt.
 
 This project was inspired by vannevar-morgan's similiar project, [check it out here!](https://github.com/vannevar-morgan/Qt-RGB-LED)
 
-![screenshot](./screenshot.png)
+![screenshot](./screenshot.png) ![screenshot_dark](./screenshot_dark.png)
 
 ## How to use
 * Currently it's only working on Linux. I might port it to Windows later if I have the time for it.
@@ -34,6 +34,11 @@ Thats it! You can now run the program using: `./Stripware`
 The program accepts these commands from the terminal:
 - `--port` - serial port to be used for communication with the RGB controller ex. `--port=/dev/ttyS0`, default is /dev/ttyUSB0
 - `--min` - starts the program in minimized mode
+
+### Dark theme
+As with any Qt application this one accepts the `-stylesheet` command in the terminal to use a custom qt stylesheet.
+I included a customized version of [this.](https://tech-artists.org/t/release-qt-dark-orange-stylesheet/2287)
+If you want to use the included dark stylesheet, type `-stylesheet=stylesheet.qss` when launching the program.
 
 ## Postscript
 If you find any issues with this program please report them [here.](https://github.com/nukecat/stripware/issues/new)
