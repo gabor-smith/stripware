@@ -38,6 +38,7 @@ The program accepts these commands from the terminal:
 ### Dark theme
 As with any Qt application this one accepts the `-stylesheet` command in the terminal to use a custom qt stylesheet.
 I included a customized version of [this.](https://tech-artists.org/t/release-qt-dark-orange-stylesheet/2287)
+
 If you want to use the included dark stylesheet, type `-stylesheet=stylesheet.qss` when launching the program.
 
 ## Postscript
