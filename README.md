@@ -23,7 +23,7 @@ This project was inspired by vannevar-morgan's similiar project, [check it out h
 ### Linux
 Make sure you have your dependencies ready!
 1. Open your terminal emulator
-2. Clone the repository using: `git clone https://github.com/nukecat/stripware`
+2. Clone the repository using: `git clone https://github.com/gabor-smith/stripware`
 3. Change into the cloned directory: `cd stripware/Stripware-qt/`
 4. Run qmake: `qmake Stripware.pro`
 5. Run make: `make`
